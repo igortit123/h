@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#000000">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>НАЧАТЬ ОПРОС?</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="room"><div id="win"><canvas id="rain"></canvas></div><div id="bed"></div><div id="desk"></div></div>
+<div id="crt">
+  <section id="menu" class="screen on">
+    <h1 id="title">НАЧАТЬ ОПРОС?</h1>
+    <div class="btns">
+      <button id="btnStart" class="btn">ДА</button>
+      <button id="btnContinue" class="btn" hidden>ПРОДОЛЖИТЬ ОПРОС</button>
+    </div>
+    <p id="honest">Пожалуйста, отвечайте честно</p>
+    <p id="metaInfo" class="small"></p>
+    <button id="btnWipe" class="link">стереть прогресс</button>
+  </section>
+
+  <section id="game" class="screen">
+    <div id="counter"></div>
+    <div id="clock"></div>
+    <p id="qtext"></p>
+    <div class="btns">
+      <button id="btnYes" class="btn" disabled>ДА</button>
+      <button id="btnNo" class="btn" disabled>НЕТ</button>
+    </div>
+    <div id="console"></div>
+  </section>
+
+  <section id="end" class="screen">
+    <div id="endText"></div>
+    <div id="endTitle"></div>
+    <div class="btns" id="endBtns" hidden>
+      <button id="btnAgain" class="btn">ПРОЙТИ СНОВА</button>
+      <button id="btnMenu2" class="btn">В МЕНЮ</button>
+    </div>
+  </section>
+
+  <div id="whisper" class="whisper"></div>
+  <div id="sysbox"><div class="sysbar">Системное сообщение</div><p id="sysTxt"></p><button id="sysOk" class="btn mini">ОК</button></div>
+  <div id="blackout"><p id="blackTxt"></p></div>
+  <canvas id="noise"></canvas>
+  <div id="scan"></div><div id="vig"></div><div id="roll"></div>
+
+</div>
+  <div id="hud">
+    <button id="btnMute" class="mini" title="Включить или отключить звук">ЗВУК: ВКЛ</button>
+    <input id="vol" type="range" min="0" max="100" value="60" aria-label="Громкость">
+    <button id="btnVib" class="mini" hidden>ВИБРО: ВКЛ</button>
+    <button id="btnFs" class="mini" title="Полноэкранный режим">ЭКРАН</button>
+    <button id="btnHome" class="mini" title="Вернуться в меню">МЕНЮ</button>
+  </div>
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
